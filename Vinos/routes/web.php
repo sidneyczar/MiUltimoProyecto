@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix'=>'admin','as'=>'admin' ], function(){
+    Route::get('/', 'AdminController@index');
+    Route::get('/usuario', 'UsuariosContoller@index');
+    
+
+});
