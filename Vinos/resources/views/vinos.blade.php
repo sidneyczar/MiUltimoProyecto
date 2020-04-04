@@ -3,35 +3,9 @@
 
          <!-- Page Heading -->
          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-         <h1 class="h3 mb-0 text-gray-800">Usuarios</h1>
+         <h1 class="h3 mb-0 text-gray-800">Vinos</h1>
          <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#modalAgregar">
-             <i class="fas fa-user fa-sm text-white-50"></i> Agregar Usuario
-             </a>
-         </div>
-
-         <div clas="row">
-         @if($message = Session::get('Listo'))
-                <div class="col-12 alert alert-success alert-dismissable fade show" role="alert">
-                    <h5>Notificación </h5>
-                   <span>{{ $message }}</span>
-                </div>
-             @endif
-             <tabla class="table col-12 table-responsive">
-                <thead>
-                  <tr>
-                    <td>Id</td>
-                    <td>Nombre</td>
-                    <td>Email</td>
-                    <td>Nivel</td>
-                    <td>&nbsp;</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr> 
-
-                  </tr>
-                </tbody>
-             </tabla>
+             <i class="fas fa-table fa-sm text-white-50"></i> Agregar vino</a>
          </div>
 
 <!-- Modal -->
@@ -39,12 +13,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar usuario</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agregar vino</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="/admin/usuario" method="post">
+      <form action="/admin/vinos" method="post">
              @csrf
             <div class="modal-body">
             @if($message = Session::get('ErrorInsert'))
@@ -58,19 +32,19 @@
                 </div>
              @endif
                 <div class="form-group">
-                    <input type="text" class="form-control" name="nombre" placeholder="Nombre" value="{{ old('nombre') }}">
+                    <input type="text" class="form-control" name="edad" placeholder="Edad del vino" value="{{ old('edad') }}">
                 </div>
 
                 <div class="form-group">
-                    <input type="email" class="form-control" name="email" placeholder="Email" value="{{ old('email') }}">
+                    <input type="text" class="form-control" name="color" placeholder="Color" value="{{ old('color') }}">
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" name="pass1" placeholder="Password">
+                    <input type="text" class="form-control" name="azucar" placeholder="Azucar Residual" value="{{ old('azucar') }}">
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" name="pass2" placeholder="Confirmar Password">
+                    <input type="integer" class="form-control" name="grado" placeholder="Grado alcoholico" value="{{ old('grado') }}">
                 </div>
 
             </div>
@@ -95,6 +69,3 @@
       });
     </script>
 @endsection('scripts')
-
-
-

@@ -5,7 +5,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
     <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+  <div class="sidebar-brand-text mx-3">VitiViti</sup></div>
 </a>
 
 <!-- Divider -->
@@ -13,14 +13,21 @@
     <li class="nav-item">
         <a class="nav-link" href="/admin/">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Admin</span>
+            <span>Administrador</span>
         </a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="/admin/usuario">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-user"></i>
             <span>Usuarios</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/vinos">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Vinos</span>
         </a>
     </li>
 

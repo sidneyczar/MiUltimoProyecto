@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::group(['prefix'=>'admin','as'=>'admin' ], function(){
     Route::get('/', 'AdminController@index');
     Route::get('/usuario', 'UsuariosContoller@index');
+    Route::get('/vinos', 'VinosController@index');
     
-
+    Route::resource('/usuario', 'UsuariosContoller');
+    Route::resource('/vinos', 'VinosController');
 });
